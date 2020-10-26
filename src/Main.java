@@ -1,41 +1,59 @@
-import java.util.Arrays;
-
 public class Main {
+    //Code your solution to problem number one here
+    static int problemOne(String s){
+        int answer = 0;
 
 
-        public static int[] add( int[] arr, int num){
+        for(int i = 0; i < s.length(); i++) {
+            switch (s.substring(i,i+1)){
+                case "a":
+                    answer++;
+                    break;
+                case "e":
+                    answer++;
+                    break;
+                case "i":
+                    answer++;
+                    break;
+                case "o":
+                    answer++;
+                    break;
+                case "u":
+                    answer++;
+                    break;
 
-            return insert(arr, arr.length + 1, num);
+            }
         }
 
-        public static int[] delete( int[] arr){
-            int[] arr2 = new int[arr.length - 1];
-            for (int i = 0; i < arr2.length; i++) {
-                arr2[i] = arr[i];
+        return answer;
+    }
+    //Code you problem number two here
+    static int problemTwo(String s){
+        int answer = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (i == s.length()-2){
+                break;
             }
-            return arr2;
+            if (s.substring(i,i+3).equals("bob")){
+                answer++;
+            }
         }
-
-        public static int[] insert ( int[] arr, int index, int num){
-            int[] brr = new int[arr.length + 1];
-            for (int i = 0; i < index - 1; i++) {
-                brr[i] = arr[i];
-            }
-            brr[index - 1] = num;
-            for (int i = index; i < brr.length; i++) {
-                brr[i] = arr[i - 1];
-            }
-            return brr;
-        }
-
+        return answer;
+    }
+    //Code your solution to problem number 3 here
+    static String problemThree(String s){
+        //your code here
+        return s;
+    }
     public static void main(String[] args) {
-        int[] arr = new int[5];
-        for(int i=0;i < arr.length; i++){
-            arr[i] = i+1;
-        }
-        System.out.println(Arrays.toString(arr));
-        arr = insert(arr,5,4);
-        System.out.println(Arrays.toString(arr));
+        /*
+        Set s to a string and run your method using s as the parameter
+        Run your method in a println statement to determine what the output was
+        Once you think you have it working try running the tests.
+        The tests will put your method through several different Strings to test
+        all possible cases.  If you have 100% success then there is no bugs in your methods.
+         */
+        String s;
 
     }
 }
